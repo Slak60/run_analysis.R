@@ -53,4 +53,4 @@ Subject <- merged_data[, 563]
 ##5. From the data set of step 4, creates a second independent tidy data set with the average of each variable
 ## for each activity and each subject
 tidy_data_set <- aggregate(narrow_data,by=list(Subject=Subject,Activities=activities), mean)
-
+write.table(tidy_data_set, file="./UCI HAR Dataset/tidydata.txt",row.names=FALSE)
